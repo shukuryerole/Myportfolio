@@ -1,0 +1,258 @@
+#home.content.active {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    padding-bottom: 0;
+    min-height: calc(100vh - 120px);
+}
+
+.img-container {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-container::before , .img-container::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    z-index: 1;
+    background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        var(--green)
+    );
+    animation: revolve 4s linear infinite;
+}
+
+.img-container::after {
+    animation-delay: 2s;
+}
+
+@keyframes revolve {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.img-container img {
+    width: calc(100% - 1px);
+    width: 92%;
+    height: 92%;
+    /* height: calc(100% - px); */
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+    background: var(--primary);
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.details h2 {
+    font-size: 2.2rem;
+}
+
+.details h2 span {
+    background: linear-gradient(to right, var(--green), var(--white));
+    padding-bottom: 2px;
+    border-bottom: 5px solid var(--green);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+.details h3 {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.details h3 span{
+    color: var(--green);
+    display: inline-block;
+    min-width: 130px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.details h3 span::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 0.7s steps(1) infinite;
+}
+@keyframes blink {
+    0% , 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+.details p {
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;   
+    align-items: center;
+    flex-wrap: wrap;
+   
+}
+
+.btn{
+    width: 12rem;
+    padding: 0.8rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 5px;
+    background: var(--green);
+    cursor: pointer;
+    border: none;
+    transform: all ease 0.3s;
+}
+
+
+
+.social-icons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.social-icons a {
+   text-decoration: none;
+   color: var(--green);
+   border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 45px;
+    height: 45px;
+    transition: all ease 0.3s;
+
+}
+.btn:hover{
+    box-shadow: 3px 3px 3px var(--green);
+    box-shadow: -3px 3px 3px var(--green);
+    box-shadow: 3px 3px 3px var(--green);
+    box-shadow: -3px -3px 3px var(--green);
+    background: transparent;
+    border: 2px solid var(--green);
+    color: var(--white);
+}
+
+.social-icons a i {
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover{
+    color: var(--primary);
+    background: var(--green);
+    box-shadow: -2px 2px 2px var(--green);
+    box-shadow: 2px -2px 2px var(--green);
+    box-shadow: 2px 2px 2px var(--green);
+    box-shadow: -2px -2px 2px var(--green);
+    
+}
+
+
+
+
+@media screen and (width >= 768px) {
+    #home.content.active {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        gap: 3.5rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .details h2 {
+        font-size: 3rem;
+    }
+
+    .details h3 {
+        font-size: 2.5rem;
+    }
+
+    .social-icons{
+        font-size: 3rem;
+    }
+
+    .bottom{
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .btn {
+        border-radius: 50px;
+    }
+
+
+}
+
+@media screen  and (width >= 1024px) {
+    #home.content.active {
+        margin: 3rem auto;
+        align-items: center;
+    }
+
+    .img-container{
+        width: 320px;
+        height: 320px;
+    }
+
+    .details {
+        gap: 30px;
+    }
+
+    .details h2 {
+        font-size: 4rem;
+    }
+    .details h3 {
+        font-size: 2.4rem;
+    }
+
+    .details p {
+        font-size: 1.3rem;
+    }
+
+
+}
+
+
+
+
+    

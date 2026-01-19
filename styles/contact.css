@@ -1,0 +1,173 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+#contact.content.active {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin: 3rem 0;
+    align-items: flex-start;
+}
+
+
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+}
+
+.contact-info h2 span {
+    color: var(--green);
+}
+
+.contact-info p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    max-width: 550px;
+}
+
+
+
+.contact-media {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+}
+
+.media {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.media span {
+    background-color: var(--disabled);
+    padding: 0.6rem;
+    border-radius: 6px;
+}
+
+.media i {
+    font-size: 2rem;
+    color: var(--green);
+}
+
+.contact-value p {
+    color: var(--green);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.contact-value a {
+    font-size: 1.2rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.contact-value a:hover {
+    color: rgb(155, 213, 229);
+    text-decoration: underline;
+}
+
+
+
+form {
+    background: var(--disabled);
+    padding: 1.2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    border: none;
+}
+
+legend {
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+legend span {
+    color: var(--green);
+}
+
+label {
+    font-size: 1.3rem;
+}
+
+.fields {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.fields div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+
+input,
+textarea {
+    width: 100%;
+    background: var(--disabled);
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    border-radius: 6px;
+    color: var(--white);
+}
+
+textarea {
+    resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--white);
+    opacity: 0.6;
+}
+
+#send-msg {
+    margin: 1rem auto 0;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #contact.content.active {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contact-media {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fields {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fields div:last-child {
+        grid-column: 1 / -1;   
+    }
+}
