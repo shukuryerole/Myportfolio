@@ -3,25 +3,48 @@ const projectList = [
         id: 1,
         number: "01",
         title: "Movie Flex",
-        description: "Loream dsffsgfdfsgdsgfdfgdfgdf",
+        description: "Developed Movie Flex, a movie listing app that fetches and displays movie details using API integration.",
         techStack: ["HTML","CSS"],
         image: "img4.png",
         liveLink: "#",
         githubLink: "#",
 
     },
-
-    {
+     {
         id: 2,
         number: "02",
-        title: "Porfolio",
-        description: "Loream dsffsgfdfsgdsgfdfgdfgdf",
-        techStack: ["HTML","CSS"],
-        image: "img4.png",
+        title: "My Portfolio",
+        description: "Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase projects, skills, and contact information.",
+        techStack: ["HTML , CSS , JavaScript"],
+        image: "portfolio.jpeg",
         liveLink: "#",
-        githubLink: "#",
+        githubLink: "https://github.com/shukuryerole/Myportfolio",
 
-    }
+    },
+
+    {
+        id: 3,
+        number: "03",
+        title: "Currency Coverter",
+        description: "Built a Currency Converter using HTML, CSS, and JavaScript with real-time exchange rates",
+        techStack: ["HTML","CSS","JavaScript"],
+        image: "img5.png",
+        liveLink: "#",
+        githubLink: "https://github.com/shukuryerole/CurrencyConverter",
+
+    },
+    {
+        id: 4,
+        number: "04",
+        title: "Weather App",
+        description: "Developed a Weather App using React.js that displays real-time weather data through API integration.",
+        techStack: ["React.js"],
+        image: "img6.1.jpg",
+        liveLink: "#",
+        githubLink: "https://github.com/shukuryerole/Weather.App",
+
+    },
+
 ];
 const projects = document.querySelector(".projects");
 let currentIndex = 0;
